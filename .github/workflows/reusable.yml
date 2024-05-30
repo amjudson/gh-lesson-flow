@@ -29,4 +29,5 @@ jobs:
         run: echo "Deploying to production"
       - name: Set output
         id: set-result
-        run: echo "step-result=success" >> $GITHUB_OUTPUT
+#        run: echo "step-result=success" >> $GITHUB_OUTPUT
+        run: echo "::set-output name=step-result::success"
