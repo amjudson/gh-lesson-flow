@@ -8,7 +8,7 @@ on:
         default: dist
         type: string
     outputs:
-      result: "success"
+      result: ${{ jobs.deploy.outputs.deploy-outcome }}
 #    secrets:
 #      secret-name:
 #        description: Name of the secret to use
@@ -16,7 +16,7 @@ on:
 jobs:
   deploy:
     outputs:
-      outcome: ${{ steps.set-result.outputs.step-result }}
+      deploy-outcome: ${{ steps.set-result.outputs.step-result }}
     runs-on: ubuntu-latest
     steps:
       - name: Get build artifacts
