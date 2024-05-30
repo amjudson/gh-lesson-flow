@@ -8,7 +8,7 @@ on:
         default: dist
         type: string
     outputs:
-      result: ${{ toJSON(jobs.deploy.outputs) }}
+      result: "${{ jobs.deploy.outputs.outcome }}"
 #    secrets:
 #      secret-name:
 #        description: Name of the secret to use
