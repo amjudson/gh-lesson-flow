@@ -8,7 +8,7 @@ on:
         default: dist
         type: string
     outputs:
-      result: "${{ jobs.deploy.outputs.outcome }}"
+      result: "success"
 #    secrets:
 #      secret-name:
 #        description: Name of the secret to use
